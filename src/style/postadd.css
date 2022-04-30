@@ -1,0 +1,36 @@
+.container {
+    width:100%;
+}
+
+.container textarea {
+   max-width: 100%;
+   min-width: 100%;
+   min-height: 150px;
+   border: none;
+   margin-top: 15px;
+   font-size: 1.5em;
+   font-family: 'Nunito', sans-serif;
+   font-weight: 200;
+   font-style: italic;
+}
+
+.container button {
+    padding: 15px 35px;
+    border: none;
+    background-color: #ffb938;
+    color:#fff;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: all .5s;
+}
+
+.container button:hover {
+    padding:15px 45px;
+}
+
+.container textarea:focus {
+    outline: 3px solid #ffb938;
+}

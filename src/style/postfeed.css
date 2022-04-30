@@ -1,0 +1,106 @@
+.Feed {
+    width: 100%;
+    background-color: #dfdfdf;
+
+}
+
+.Feed span.up-button {
+    position: absolute;
+    top:90vh;
+    right: 20vw;
+    position: fixed;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 2px 2px 5px black;
+}
+
+.Feed .Post {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    margin: 20px auto;
+        
+}
+
+.Feed .Post .avatar {
+    position: absolute;
+    margin:0;
+}
+
+.Feed .Post .delete-icon {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.Feed .Post .avatar {
+    top:10px;
+    left:10px;
+}
+
+.Feed .Post .avatar img {
+    width:50px;
+    border-radius: 50%;
+}
+
+.Feed .Post span.username {
+    position: absolute;
+    top:20px;
+    left:80px;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.Feed .Post .date {
+    position:absolute;
+    top:7px;
+    right:20px;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-size: 1em;
+}
+
+.Feed .Post .content {
+    text-align: left;
+    padding: 75px 35px;
+    top:70px;
+    left:20px;
+}
+
+.Feed .Post .likes {
+    position: absolute;
+    bottom:15px;
+    left:20px;
+    margin:0;
+    cursor: pointer;
+}
+
+.Feed .Post .likes svg {
+
+    margin-right: 5px;
+}
+
+.Feed .Post .username .sub-container .subscribtion{
+    margin-left: 15px;
+    font-size: 0.7em;
+    color: #a3a3a3;
+    cursor: pointer;
+}
+
+.Feed .Post .username .sub-container .subscribtion:hover {
+    color:#696969
+}
+
+@media screen and (max-width:1200px) {
+    .Feed span.up-button {
+        top:90vh;
+        right: 3vw;
+    }
+}

@@ -1,0 +1,56 @@
+.rec-container-outside {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.rec-container-outside .rec-user-container {
+    flex-basis: 30%;
+}
+
+.rec-container-outside .rec-user-container .rec-user img {
+    margin: 20px 0;
+    width: 120px;
+    border-radius: 99%;
+}
+
+
+
+.rec-container-outside .rec-user-container .rec-user .username, 
+h1 {   
+    margin: 0;
+    top:20px;
+    left:80px;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.5em;
+    flex-basis: 100%;
+}
+
+.rec-container-outside .rec-user-container .rec-user button {
+    padding: 15px 35px;
+    border: none;
+    background-color: #ffb938;
+    color:#fff;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: all .5s;
+}
+
+.rec-container-outside .rec-user-container .rec-user button:hover {
+    padding: 15px 45px;
+}
+
+@media screen and (max-width:576px) {
+    .rec-container-outside .rec-user-container {
+        flex-basis: 100%;
+    }
+}

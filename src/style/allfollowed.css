@@ -1,0 +1,72 @@
+.container {
+    text-align: center;
+}
+
+.container .user-container {
+    position: relative;
+    height: 150px;
+    width:500px;
+    margin: 15px auto;
+    background-color: #fff;
+}
+
+.container .user-container img {
+    position: absolute;
+    left:15px;
+    top:15px;
+    border-radius: 99%;
+    width: 120px
+}
+
+
+.container .user-container .username {
+    position: absolute;
+    top:20px;
+    left: 180px;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.container .user-container button {
+    position: absolute;
+    right: 5%;
+    top:37px;
+    padding: 15px 35px;
+    border: none;
+    background-color: #ffb938;
+    color:#fff;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: all .5s;
+}
+
+.container .user-container button:hover {
+    padding:15px 45px;
+}
+
+@media screen and (max-width:576px) {
+    .container .user-container {
+        width:100%;
+    }
+
+    .container .user-container button {
+        padding: 15px 35px;
+        top:70px;
+        right:0px;
+        left:60%;
+    }
+    .container .user-container button:hover {
+        padding: 15px 25px;;
+    }
+
+    .container .user-container .username {
+        top:10px;
+        left:60%;
+        font-size: 1.5em;
+    }
+}

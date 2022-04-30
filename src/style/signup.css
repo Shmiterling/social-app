@@ -1,0 +1,77 @@
+
+.form-container {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container form {
+    width: 20%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width:500px;
+    background-color: #ffb938;
+    padding:20px;
+    border-radius: 15px;
+}
+
+.form-container form input {
+    display: inline-block;
+    width: 70%;
+    line-height: 30px;
+    margin: 0 auto 20px auto ;
+}
+
+.form-container form .password-inputs{
+    position: relative;
+}
+
+.form-container form span {
+    top:5px;
+    position: absolute;
+    right: 18%;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.form-container form .error {
+    color: crimson;
+}
+
+.form-container form h1,
+.form-container form h3 {
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #fff;
+    font-size: 2em;
+}
+
+  
+.form-container form input:focus {
+    outline: none;
+  }
+
+.form-container form button {
+    margin: 30px auto;
+    border: none;
+    background-color:#fafafa;
+    padding: 10px 40px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    transition: all .5s;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+@media screen and (max-width:576px) {
+  .form-container form {
+    width: 100%;
+  }
+}
+
+  
+
+  

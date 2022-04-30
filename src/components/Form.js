@@ -100,7 +100,7 @@ const Form = (props) => {
                         <input ref={_input_username} type="text" placeholder="Username"></input>
                         <input ref={_input_password} type="password" placeholder="Password"></input>
                         <button type='submit' onClick={logIn}>Log In</button>
-                        <p>Don't have and account? <Link to='/SignUp'>Sign Up</Link></p>
+                        <p>Don't have and account? <Link to='/social-app/SignUp'>Sign Up</Link></p>
                     </form>
                 </div>
             </aside>

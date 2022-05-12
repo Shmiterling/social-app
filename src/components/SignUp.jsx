@@ -109,7 +109,7 @@ export default function SignUp() {
             flag = true
         }
 
-        if (!_input_password.current.value.match(/[!#@$%)]/) && _input_password.current.value !== '') {
+        if (!_input_password.current.value.match(/[!#@$%]/) && _input_password.current.value !== '') {
             setSpecialPasswordError(true)
             flag = true
         }
@@ -177,7 +177,7 @@ export default function SignUp() {
                         {existUsernameError && <p className="error">The username has already been taken.</p>}
                         {emptyPasswordError && <p className="error">Passwords field is empty</p>}
                         {samePasswordError && <p className="error">Passwords must be the same</p>}
-                        {specialPasswordError && <p className="error">Password must include specific charecter !#@$%)</p>}
+                        {specialPasswordError && <p className="error">Password must include specific charecter !#@$%</p>}
                         {lengthPasswordError && <p className="error">Password must contain at least 6 charecters</p>}
                         {numberPasswordError && <p className="error">Password must contain at least one number</p>}
                         {emailError && <p className="error">The email field is required.</p>}

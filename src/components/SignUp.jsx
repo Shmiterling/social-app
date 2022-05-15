@@ -4,8 +4,9 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import Navbar from "./Navbar";
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { regular} from '@fortawesome/fontawesome-svg-core/import.macro';
 
 export default function SignUp() {
 
@@ -61,7 +62,7 @@ export default function SignUp() {
 
     }
 
-
+    let navigate = useNavigate();
 
     //SIGN IN FUNCTION
     const signUpFunction = (event) => {
@@ -154,8 +155,11 @@ export default function SignUp() {
                         }
                     } else {
                         setSigningUpSuccess(res.data.signedup)
+
+                        
+
                         setTimeout(() => {
-                            window.location.href = "/social-app/Login"
+                            navigate("/social-app/Login",{replace: true})
                         },1000)
                     }
                 })

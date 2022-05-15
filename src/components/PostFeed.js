@@ -2,9 +2,8 @@ import '../style/postfeed.css'
 
 import React, { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { solid, regular} from '@fortawesome/fontawesome-svg-core/import.macro';
 import ReactTimeAgo from 'react-time-ago';
-import { useInView } from 'react-intersection-observer';
 import axios from "axios";
 
 
@@ -66,18 +65,18 @@ const PostFeed = (props) => {
     //INFINITE SCROLL FUNCTION
     const containerRef = useRef(null);
     const [newPostsDownloadFlag, setNewPostDownloadFlag] = useState(false);
-    const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 1.0
-    }
-
-    const createObserver = () => {
-        const observer = new IntersectionObserver(infiniteScroll, options)
-        observer.observe(containerRef.current)
-    }
-
+    
+    
     useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 1.0
+        }
+        const createObserver = () => {
+            const observer = new IntersectionObserver(infiniteScroll, options)
+            observer.observe(containerRef.current)
+        }
         setTimeout(createObserver, 2000)
     }, [])
 
@@ -148,13 +147,13 @@ const PostFeed = (props) => {
             <div className="Post" key={latestPost.id}>
                 <span className="username">
                     {latestPost.user.username}
-                    {flag || loggedIn && <span className="sub-container">
+                    {(!flag && loggedIn) && <span className="sub-container">
                         {isFollowed || <span className="subscribtion" onClick={() => props.follow(latestPost.user.id)}>Follow</span>}
                         {isFollowed && <span className="subscribtion" onClick={() => props.unfollow(latestPost.user.id)}>Unfollow</span>}
                     </span>}
                 </span>
                 {flag && loggedIn && <span onClick={() => props.postDelete(latestPost)}><FontAwesomeIcon className='delete-icon' icon={regular('trash-can')} /></span>}
-                <div className="avatar"><img src={latestPost.user.avatar_url}></img></div>
+                <div className="avatar"><img src={latestPost.user.avatar_url} alt="avatar"></img></div>
                 <p className="content">{latestPost.content}</p>
 
                 {isLiked && <p className="likes" onClick={() => { props.likeDislike(latestPost.id, isLiked) }}><FontAwesomeIcon icon={solid('heart')} />{latestPost.likes.length}</p>}
